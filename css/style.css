@@ -18,8 +18,8 @@ body{
 }
 header{
     background: var(--dark);
-    height: 800px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 85% 97% , 0 100%);
+    height: 600px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 97% , 0 100%);
 }
 
 .container{
