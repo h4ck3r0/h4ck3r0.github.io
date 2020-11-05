@@ -94,14 +94,15 @@ section.about h1 span{
 color: blueviolet;
 }
 section.about h3{
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     font-weight: 400;
 }
 section.about p{
     font-family:'lato' ,sans-serif;
     color: var(--ternary);
-    line-height: 1.8;
+    line-height: 1.8
+font-size: 0.5rem ;
 }
 section.about .social{
     display: flex;
