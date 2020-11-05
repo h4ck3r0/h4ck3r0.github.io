@@ -19,7 +19,7 @@ body{
 header{
     background: var(--dark);
     height: 750px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 97% , 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 87% , 0 100%);
 }
 
 .container{
