@@ -1,0 +1,124 @@
+@import 'utilities.css';
+:root{
+    --primary:#3DCFD3;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --ternary:#898989;
+    --light:#F2F2F2;
+}
+body{
+  font-family:'Awesome' ;  
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    -webkit-font-smoothing:antialiased;
+
+}
+header{
+    background: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 87% , 0 100%);
+}
+
+.container{
+    max-width: 1152px;
+    padding: 0 15px;
+    margin:0 auto;
+}
+
+header nav .left a{
+    color:var(--pure) ;
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform:uppercase ;
+    transition:all .3s ;
+}
+header nav .left a:hover{
+    color: var(--primary);
+}
+header nav {
+    padding: 2rem 0;
+}
+header nav .branding{
+    margin-right: 3rem;
+}
+.fuck{
+    max-width: 1000px;
+    padding: 0 15px;
+    margin:0 auto;
+}
+.hero{
+    padding: 1rem 2rem;
+}
+.hero .left  img{
+    width: 300px;
+}
+
+.hero .right{
+    color: var(--pure);
+}
+
+.hero .right h6{
+font-size: 2rem;
+color: var(--primary);
+margin-bottom: 0.5rem;
+}
+.hero .right h1{
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+   
+}
+.hero .right h1 span{
+    color: aquamarine;
+}
+.hero .right p{
+    line-height: 1.9;
+margin-bottom: 2rem;
+}
+section{
+    padding:6rem 0 ;
+}
+section.about .about-me-img{
+height: 300px;
+}
+section.about h1{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font: weight 400; ;
+}
+section.about h1 span{
+color: blueviolet;
+}
+section.about h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+section.about p{
+    font-family:'lato' ,sans-serif;
+    color: var(--ternary);
+    line-height: 1.8;
+}
+section.about .social{
+    display: flex;
+}
+section.about .social a{
+
+display: flex;
+align-items: centre;
+justify-content: centre;
+width: 40px;
+height:40px ;
+margin-right: 0.6rem;
+transition:,3s ;
+
+   
+}
+section.about .social a img{
+    widows: 45px; ;
+    height: 45px;
+    padding: 0rem;
+}

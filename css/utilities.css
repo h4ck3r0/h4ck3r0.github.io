@@ -1,0 +1,53 @@
+.flex{
+    display:flex;
+}
+.item-center{
+    align-items: center;
+}
+.justify-between{
+    justify-content:space-between;
+}
+.flex-1{
+    justify-content:center;
+}
+.btn{
+    padding: 0rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border:1px solid transparent ;
+    outline: none ;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .3s ease;
+
+}
+.btn-primary{
+    background:var(--primary) ;
+    color: var(--seconary);
+}
+.btn-primary:hover{
+    background:transparent ;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.btn-secondary{
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-secondary:hover{
+    background: var(--primary);
+    color: var(--seconary);
+}
+.flex-1{
+flex: 2;
+}
+.justify-centre{
+    justify-content: center;
+}
+.lope{
+    border: 1px var(--primary);
+}
+.about-me-img{
+background: blanchedalmond;
+}
