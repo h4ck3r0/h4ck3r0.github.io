@@ -18,7 +18,7 @@ body{
 }
 header{
     background: var(--dark);
-    height: 900px;
+    height: 2000px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 85% 87% , 0 100%);
 }
 
