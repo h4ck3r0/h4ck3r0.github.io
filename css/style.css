@@ -101,8 +101,8 @@ section.about h3{
 section.about p{
     font-family:'lato' ,sans-serif;
     color: var(--ternary);
-    line-height: 0.8
-font-size: 0.5rem ;
+    line-height: 0.5
+font-size: 0.3rem ;
 }
 section.about .social{
     display: flex;
