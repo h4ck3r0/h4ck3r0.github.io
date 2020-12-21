@@ -1,4 +1,4 @@
-@import 'menu.css';
+
 :root {
  --primary:#3DCFD3;
     --dark:#161616;
@@ -22,14 +22,7 @@ h2 {
     font-size:2rem;
      color:#ff6699;
 }  
-h3{
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 93, 0.5);
-    padding-top:20px;
-    padding-bottom:30px;
-    font-size:1.2rem;
-}
+
 .icons{
  padding-top:25px;
  }
