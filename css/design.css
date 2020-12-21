@@ -205,13 +205,13 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
-  .about-info .job {
+  .about-info .work-1 {
+    grid-area: work1; }
+  .about-info .work-2 {
+    grid-area: work2; }
+  .about-info .work-3 {
+    grid-area: work3; }
+  .about-info .work {
     background: #515151;
     padding: 0.5rem;
     border-bottom: #66ccff 5px solid; }
