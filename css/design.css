@@ -206,11 +206,11 @@ main {
     grid-area: bio;
     font-size: 1.5rem; }
   .about-info .work-1 {
-    grid-area: work1; }
+    grid-area: work-1; }
   .about-info .work-2 {
-    grid-area: work2; }
+    grid-area: work-2; }
   .about-info .work-3 {
-    grid-area: work3; }
+    grid-area: work-3; }
   .about-info .work {
     background: #515151;
     padding: 0.5rem;
