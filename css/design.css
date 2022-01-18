@@ -16,7 +16,7 @@ h1{
     padding-bottom:25px;
 }
 h1 span{
-    color : #66ccff;
+    color :7cfc00;
     padding-bottom:25px;
     }
 h2 {
@@ -24,7 +24,7 @@ h2 {
      color:#ff6699;
 }  
 h3{
-    
+    color: 7cfc00 ;
     padding-top:20px;
     padding-bottom:30px;
     font-size:1.2rem;
@@ -173,7 +173,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #33ccff; }
+  color: 7cfc00; }
 
 main {
   padding: 4rem;
