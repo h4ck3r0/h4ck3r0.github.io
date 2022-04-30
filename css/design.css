@@ -220,7 +220,7 @@ main {
   .about-info .work-3 {
     grid-area: work3; }
   .about-info .work {
-    background: #515151;
+    background: rgba(73, 73, 93, 0.5);
     padding: 0.5rem;
     border-bottom: #66ccff 5px solid; }
 
