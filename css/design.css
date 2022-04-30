@@ -31,6 +31,9 @@ h3{
 }
 h6{
  color: 	#FF0000 ;
+ padding-top:20px;
+    padding-bottom:30px;
+    font-size:0.8rem
 }
 .icons{
  padding-top:25px;
