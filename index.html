@@ -3,87 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/design.css">    
+    <title>VS Code Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-      <style>
-body{
-  background-image: url('./img/pd.png');
-}
-</style>
-    <header>
-    <a href="https://dev.to/h4ck3r0"> <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="H4Ck3R's DEV Profile" height="60" width="60"> </a>
-        <div class="menu-btn">
-<div class="btn-line"></div>
-<div class="btn-line"></div>
-<div class="btn-line"></div>
+<body class="dark-theme">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo">
+            <img src="https://code.visualstudio.com/favicon.ico" alt="VS Code Logo">
+            <span>Portfolio</span>
         </div>
-        <nav class="menu">
-            <div class="menu-branding">
-            
-            <div class="portrait">
-            <img src="img/logo1.png" height=250 width=250 alt="H4CK3R" class="bio-image">
-            </div>
-            </div>
-            <ul class="menu-nav">
-             <li class="nav-item current">
-                <a href="./index.html" class="nav-link">
-                  Home
-              </a>
-             </li>
-            
-              <li class="nav-item">
-                  <a href="./about.html" class="nav-link">
-                About Me
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./skill.html" class="nav-link">
-              My Work
-              </a>
-            </li>
-            <li class="nav-item">
-                <a href="./contact.html" class="nav-link">
-              Contact
-              </a>
-            </li>
-            
+        <div class="menu-bar">
+            <ul class="desktop-menu">
+                <li>File</li>
+                <li>Edit</li>
+                <li>View</li>
+                <li>Go</li>
+                <li>Terminal</li>
+                <li>Help</li>
             </ul>
-        </nav>
-        <main id="Home">
-<h1 class="lg-heading">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=40&duration=4000&pause=1000&color=0DF700&background=FFFFFF00&multiline=true&width=435&height=100&lines=Hey+Geeks+%F0%9F%A4%93;I+Am+Raj+Aryan" alt="Typing SVG" /></a>
-</h1>
-<h2 class="sm-heading">
-    Web Developer , Programmer , Coder & Ethical Hacker
-</h2>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
 
-<div class="icons">
-    <a href="https://github.com/h4ck3r0">
-        <i class="fab fa-github fa-2x"></i>
-    </a> 
-    <a href="https://www.facebook.com/H4ck3r-Team-105208978160981/">
-        <i class="fab fa-facebook fa-2x"></i>
-    </a>
-    <a href="https://instagram.com/h4ck3r_0?igshid=55siecxea0mm">
-        <i class="fab fa-instagram fa-2x"></i>
-     
-    </a>
-    <a href="https://youtu.be/VDeLnDxVziw">
-        <i class="fab fa-youtube fa-2x"></i>
-     
-    </a>
-</div>
+    <div class="main-container">
+        <!-- Activity Bar -->
+        <div class="activity-bar">
+            <div class="activity-icon active" data-tooltip="Explorer"><i class="fas fa-folder"></i></div>
+            <div class="activity-icon" data-tooltip="Hearts" id="hearts-icon"><i class="fas fa-heart"></i></div>
+            <div class="activity-icon" data-tooltip="Source Control"><i class="fas fa-code-branch"></i></div>
+            <div class="activity-icon" data-tooltip="Debug"><i class="fas fa-bug"></i></div>
+            <div class="activity-icon" id="toggle-sidebar" data-tooltip="Hide Sidebar"><i class="fas fa-chevron-left"></i></div>
+            <div class="spacer"></div>
+            <div class="activity-icon" data-tooltip="Settings"><i class="fas fa-cog"></i></div>
+        </div>
 
-        </main>
-<footer id="main-footer">
-    H4CK3R
-</footer>
-        <script src="./js/main.js"></script>
-    </header>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <span>EXPLORER</span>
+                <div class="sidebar-actions">
+                    <i class="fas fa-times close-sidebar" id="close-sidebar" title="Close Sidebar"></i>
+                </div>
+            </div>
+            <div class="folder-section">
+                <div class="folder-header">
+                    <i class="fas fa-chevron-down"></i>
+                    <span>MY PORTFOLIO</span>
+                </div>
+                <div class="file-list">
+                    <div class="file" data-file="home.html"><i class="fas fa-home"></i> home.html</div>
+                    <div class="file" data-file="about.html"><i class="fas fa-user"></i> about.html</div>
+                    <div class="file" data-file="projects.html"><i class="fas fa-code-branch"></i> projects.html</div>
+                    <div class="file" data-file="skills.html"><i class="fas fa-cogs"></i> skills.html</div>
+                    <div class="file" data-file="contact.html"><i class="fas fa-envelope"></i> contact.html</div>
+                </div>
+            </div>
+        </div>
+        <div class="resize-handle" id="sidebar-resizer"></div>
+
+        <!-- Editor Area -->
+        <div class="editor-area">
+            <div class="tabs">
+                <!-- No tabs will be shown by default -->
+            </div>
+            <div class="editor-content">
+                <div class="line-numbers">
+                    <!-- Line numbers will be added dynamically -->
+                </div>
+                <div class="code-content">
+                    <!-- This should be empty or have only a comment like this -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Terminal Panel -->
+    <div class="terminal-panel" id="terminal-panel">
+        <div class="terminal-header">
+            <div class="terminal-tabs">
+                <div class="terminal-tab active">TERMINAL</div>
+                <div class="terminal-tab">OUTPUT</div>
+                <div class="terminal-tab">PROBLEMS</div>
+                <div class="terminal-tab">DEBUG CONSOLE</div>
+            </div>
+            <div class="terminal-actions">
+                <i class="fas fa-plus"></i>
+                <i class="fas fa-trash"></i>
+                <i class="fas fa-chevron-up" id="minimize-terminal"></i>
+                <i class="fas fa-times" id="close-terminal"></i>
+            </div>
+        </div>
+        <div class="terminal-content">
+            <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-text">Welcome to VS Code Terminal</span>
+            </div>
+            <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-input" id="terminal-input" contenteditable="true"></span>
+                <span class="terminal-cursor"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <div class="status-section">
+            <i class="fas fa-check-circle"></i> Ready
+        </div>
+        <div class="status-section file-type">
+            <i class="fas fa-code"></i> HTML
+        </div>
+        <div class="status-section encoding">
+            <i class="fas fa-smile"></i> UTF-8
+        </div>
+        <div class="status-section indent">
+            <i class="fas fa-space-shuttle"></i> Spaces: 4
+        </div>
+        <div class="status-section notifications">
+            <i class="fas fa-bell"></i> 0
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <div class="mobile-menu-overlay">
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <span>Menu</span>
+                <i class="fas fa-times close-mobile-menu"></i>
+            </div>
+            <ul>
+                <li><i class="fas fa-file"></i> File</li>
+                <li><i class="fas fa-edit"></i> Edit</li>
+                <li><i class="fas fa-eye"></i> View</li>
+                <li><i class="fas fa-arrow-right"></i> Go</li>
+                <li><i class="fas fa-terminal"></i> Terminal</li>
+                <li><i class="fas fa-question-circle"></i> Help</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
