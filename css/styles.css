@@ -252,8 +252,7 @@ h2::after {
 .skills {
     margin-top: calc(var(--spacing-unit) * 6);
     padding: calc(var(--spacing-unit) * 4);
-    border: 2px solid var(--primary-black);
-    border-radius: var(--border-radius);
+
 }
 
 .skills h3 {
@@ -309,6 +308,7 @@ h2::after {
 }
 
 .skill-card {
+    border: 1px solid black;
     background: var(--primary-white);
     padding: calc(var(--spacing-unit) * 3);
     border-radius: var(--border-radius);
@@ -425,7 +425,7 @@ h2::after {
 .repo-filters input,
 .repo-filters select {
     padding: 0.5rem 1rem;
-    border: 2px solid var(--gray-light);
+    border: 1px solid var(--gray-light);
     border-radius: 4px;
     font-size: 1rem;
 }
@@ -442,7 +442,7 @@ h2::after {
 }
 
 .repo-card {
-    border: 2px solid var(--primary-black);
+    border: 1px solid var(--primary-black);
     border-radius: var(--border-radius);
     padding: calc(var(--spacing-unit) * 3);
     transition: all var(--transition-speed) ease;
