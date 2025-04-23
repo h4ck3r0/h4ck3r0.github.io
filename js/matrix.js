@@ -3,7 +3,7 @@ class Matrix {
         this.canvas = document.createElement('canvas');
         this.canvas.classList.add('matrix-background');
         this.ctx = this.canvas.getContext('2d');
-        this.characters = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789";
+        this.characters = "01";
         this.fontSize = 14;
         this.columns = 0;
         this.drops = [];
