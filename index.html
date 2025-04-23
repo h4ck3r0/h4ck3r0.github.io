@@ -3,150 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS Code Portfolio</title>
+    <title>h4ck3r0's Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" rel="stylesheet">
+    <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
 </head>
-<body class="dark-theme">
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="logo">
-            <img src="https://code.visualstudio.com/favicon.ico" alt="VS Code Logo">
-            <span>Portfolio</span>
-        </div>
-        <div class="menu-bar">
-            <ul class="desktop-menu">
-                <li>File</li>
-                <li>Edit</li>
-                <li>View</li>
-                <li>Go</li>
-                <li>Terminal</li>
-                <li>Help</li>
-            </ul>
-            <div class="mobile-menu-toggle">
-                <i class="fas fa-bars"></i>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">h4ck3r0</div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#repositories">Projects</a>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="main-container">
-        <!-- Activity Bar -->
-        <div class="activity-bar">
-            <div class="activity-icon active" data-tooltip="Explorer"><i class="fas fa-folder"></i></div>
-            <div class="activity-icon" data-tooltip="Hearts" id="hearts-icon"><i class="fas fa-heart"></i></div>
-            <div class="activity-icon" data-tooltip="Source Control"><i class="fas fa-code-branch"></i></div>
-            <div class="activity-icon" data-tooltip="Debug"><i class="fas fa-bug"></i></div>
-            <div class="activity-icon" id="toggle-sidebar" data-tooltip="Hide Sidebar"><i class="fas fa-chevron-left"></i></div>
-            <div class="spacer"></div>
-            <div class="activity-icon" data-tooltip="Settings"><i class="fas fa-cog"></i></div>
-        </div>
-
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <span>EXPLORER</span>
-                <div class="sidebar-actions">
-                    <i class="fas fa-times close-sidebar" id="close-sidebar" title="Close Sidebar"></i>
+    <header id="home" class="hero">
+        <div class="profile-container">
+            <div class="profile-img-container">
+                <!-- Placeholder for profile image -->
+                <div class="profile-img placeholder">
+                    <i class="fas fa-user"></i>
                 </div>
             </div>
-            <div class="folder-section">
-                <div class="folder-header">
-                    <i class="fas fa-chevron-down"></i>
-                    <span>MY PORTFOLIO</span>
+            <h1 class="typewriter">h4ck3r0</h1>
+            <p class="subtitle">Software Developer & Security Enthusiast</p>
+            <div class="social-links">
+                <a href="https://github.com/h4ck3r0" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <div class="about-content fade-in">
+                <p class="lead">Welcome to my portfolio! I'm passionate about software development, cybersecurity, and creating impactful solutions.</p>
+                <div class="skills">
+                    <h3>Skills & Technologies</h3>
+                    <div class="skills-container">
+                        <div class="skills-category">
+                            <h4><i class="fas fa-brain"></i> AI & Machine Learning</h4>
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <i class="fas fa-robot"></i>
+                                    <span>Machine Learning</span>
+                                    <div class="skill-level expert"></div>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span>Deep Learning</span>
+                                    <div class="skill-level expert"></div>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Computer Vision</span>
+                                    <div class="skill-level advanced"></div>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fas fa-fire"></i>
+                                    <span>PyTorch</span>
+                                    <div class="skill-level expert"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h4><i class="fas fa-code"></i> Development</h4>
+                            <div class="skills-grid">
+                                <div class="skill-card">
+                                    <i class="fab fa-python"></i>
+                                    <span>Python</span>
+                                    <div class="skill-level expert"></div>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fas fa-flask"></i>
+                                    <span>Flask</span>
+                                    <div class="skill-level advanced"></div>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fas fa-terminal"></i>
+                                    <span>Bash</span>
+                                    <div class="skill-level advanced"></div>
+                                </div>
+                                <div class="skill-card">
+                                    <i class="fas fa-cogs"></i>
+                                    <span>OpenCV</span>
+                                    <div class="skill-level expert"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category">
+                            <h4><i class="fas fa-project-diagram"></i> Projects Focus</h4>
+                            <div class="projects-highlights">
+                                <div class="project-tag">Image Processing</div>
+                                <div class="project-tag">Neural Networks</div>
+                                <div class="project-tag">Data Analysis</div>
+                                <div class="project-tag">Automation</div>
+                                <div class="project-tag">CLI Tools</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="file-list">
-                    <div class="file" data-file="home.html"><i class="fas fa-home"></i> home.html</div>
-                    <div class="file" data-file="about.html"><i class="fas fa-user"></i> about.html</div>
-                    <div class="file" data-file="projects.html"><i class="fas fa-code-branch"></i> projects.html</div>
-                    <div class="file" data-file="skills.html"><i class="fas fa-cogs"></i> skills.html</div>
-                    <div class="file" data-file="contact.html"><i class="fas fa-envelope"></i> contact.html</div>
+            </div>
+        </section>
+
+        <section class="repositories" id="repositories">
+            <h2>Featured Projects</h2>
+            <div class="section-container">
+                <div class="section-header">
+                    <p class="section-description">Explore my open-source projects and contributions</p>
+                </div>
+                <div class="repo-filters">
+                <input type="text" id="searchInput" placeholder="Search repositories...">
+                <select id="languageFilter">
+                    <option value="">All Languages</option>
+                </select>
+                <select id="sortOption">
+                    <option value="updated">Last Updated</option>
+                    <option value="stars">Most Stars</option>
+                    <option value="name">Name</option>
+                </select>
+            </div>
+            <div class="repo-grid" id="repoGrid">
+                <!-- Repositories will be dynamically loaded here -->
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading repositories...</p>
                 </div>
             </div>
-        </div>
-        <div class="resize-handle" id="sidebar-resizer"></div>
+            <div class="pagination" id="pagination">
+                <!-- Pagination controls will be added here -->
+            </div>
+        </section>
+    </main>
 
-        <!-- Editor Area -->
-        <div class="editor-area">
-            <div class="tabs">
-                <!-- No tabs will be shown by default -->
-            </div>
-            <div class="editor-content">
-                <div class="line-numbers">
-                    <!-- Line numbers will be added dynamically -->
-                </div>
-                <div class="code-content">
-                    <!-- This should be empty or have only a comment like this -->
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Terminal Panel -->
-    <div class="terminal-panel" id="terminal-panel">
-        <div class="terminal-header">
-            <div class="terminal-tabs">
-                <div class="terminal-tab active">TERMINAL</div>
-                <div class="terminal-tab">OUTPUT</div>
-                <div class="terminal-tab">PROBLEMS</div>
-                <div class="terminal-tab">DEBUG CONSOLE</div>
-            </div>
-            <div class="terminal-actions">
-                <i class="fas fa-plus"></i>
-                <i class="fas fa-trash"></i>
-                <i class="fas fa-chevron-up" id="minimize-terminal"></i>
-                <i class="fas fa-times" id="close-terminal"></i>
-            </div>
-        </div>
-        <div class="terminal-content">
-            <div class="terminal-line">
-                <span class="terminal-prompt">$</span>
-                <span class="terminal-text">Welcome to VS Code Terminal</span>
-            </div>
-            <div class="terminal-line">
-                <span class="terminal-prompt">$</span>
-                <span class="terminal-input" id="terminal-input" contenteditable="true"></span>
-                <span class="terminal-cursor"></span>
-            </div>
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2025 h4ck3r0. All rights reserved.</p>
+    </footer>
 
-    <!-- Status Bar -->
-    <div class="status-bar">
-        <div class="status-section">
-            <i class="fas fa-check-circle"></i> Ready
-        </div>
-        <div class="status-section file-type">
-            <i class="fas fa-code"></i> HTML
-        </div>
-        <div class="status-section encoding">
-            <i class="fas fa-smile"></i> UTF-8
-        </div>
-        <div class="status-section indent">
-            <i class="fas fa-space-shuttle"></i> Spaces: 4
-        </div>
-        <div class="status-section notifications">
-            <i class="fas fa-bell"></i> 0
-        </div>
-
-    </div>
-
-    <script src="script.js"></script>
-
-    <div class="mobile-menu-overlay">
-        <div class="mobile-menu">
-            <div class="mobile-menu-header">
-                <span>Menu</span>
-                <i class="fas fa-times close-mobile-menu"></i>
-            </div>
-            <ul>
-                <li><i class="fas fa-file"></i> File</li>
-                <li><i class="fas fa-edit"></i> Edit</li>
-                <li><i class="fas fa-eye"></i> View</li>
-                <li><i class="fas fa-arrow-right"></i> Go</li>
-                <li><i class="fas fa-terminal"></i> Terminal</li>
-                <li><i class="fas fa-question-circle"></i> Help</li>
-            </ul>
-        </div>
-    </div>
+    <script src="js/matrix.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize 3D tilt effect for repo cards
+        VanillaTilt.init(document.querySelectorAll(".repo-card"), {
+            max: 10,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
 </body>
 </html>
