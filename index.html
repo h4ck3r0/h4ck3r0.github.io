@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>h4ck3r0's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js" rel="stylesheet">
@@ -41,72 +44,138 @@
 
     <main>
         <section class="about" id="about">
-            <h2>About Me</h2>
-            <div class="about-content fade-in">
-                <p class="lead">Welcome to my portfolio! I'm passionate about software development, cybersecurity, and creating impactful solutions.</p>
+            <div class="about-container">
+                <div class="about-header">
+                    <h2>About Me</h2>
+                    <div class="about-tags">
+                        <span class="tag"><i class="fas fa-code"></i>Developer</span>
+                        <span class="tag"><i class="fas fa-shield-alt"></i>Security</span>
+                        <span class="tag"><i class="fas fa-robot"></i>AI</span>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">Greetings! I'm a tech enthusiast with a deep passion for AI, cybersecurity, and innovative development. With a focus on cutting-edge technologies, I strive to create solutions that make a difference.</p>
+                        <p class="sub-lead">When I'm not coding, you'll find me:</p>
+                        <ul class="about-list">
+                            <li><i class="fas fa-terminal"></i>Exploring new security tools</li>
+                            <li><i class="fas fa-code-branch"></i>Contributing to open-source</li>
+                            <li><i class="fas fa-brain"></i>Learning emerging technologies</li>
+                            <li><i class="fas fa-project-diagram"></i>Building innovative solutions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-cards">
+                        <div class="about-card">
+                            <div class="card-icon"><i class="fas fa-code"></i></div>
+                            <h4>Clean Code</h4>
+                            <p>Writing elegant, maintainable solutions that scale</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h4>Security First</h4>
+                            <p>Implementing robust security practices in every project</p>
+                        </div>
+                        <div class="about-card">
+                            <div class="card-icon"><i class="fas fa-robot"></i></div>
+                            <h4>AI Innovation</h4>
+                            <p>Leveraging AI/ML to solve complex problems</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="skills">
                     <h3>Skills & Technologies</h3>
-                    <div class="skills-container">
-                        <div class="skills-category">
-                            <h4><i class="fas fa-brain"></i> AI & Machine Learning</h4>
-                            <div class="skills-grid">
-                                <div class="skill-card">
-                                    <i class="fas fa-robot"></i>
-                                    <span>Machine Learning</span>
-                                    <div class="skill-level expert"></div>
+                    <div class="skills-wrapper">
+                        <div class="skills-group">
+                            <div class="skills-header">
+                                <i class="fas fa-brain"></i>
+                                <h4>AI & Machine Learning</h4>
+                            </div>
+                            <div class="skill-tiles">
+                                <div class="skill-tile" data-level="95">
+                                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                                    <div class="skill-info">
+                                        <h5>Machine Learning</h5>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar"></div>
+                                            <span>Expert</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="skill-card">
-                                    <i class="fas fa-network-wired"></i>
-                                    <span>Deep Learning</span>
-                                    <div class="skill-level expert"></div>
+                                <div class="skill-tile" data-level="90">
+                                    <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                                    <div class="skill-info">
+                                        <h5>Deep Learning</h5>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar"></div>
+                                            <span>Expert</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="skill-card">
-                                    <i class="fas fa-eye"></i>
-                                    <span>Computer Vision</span>
-                                    <div class="skill-level advanced"></div>
-                                </div>
-                                <div class="skill-card">
-                                    <i class="fas fa-fire"></i>
-                                    <span>PyTorch</span>
-                                    <div class="skill-level expert"></div>
+                                <div class="skill-tile" data-level="85">
+                                    <div class="skill-icon"><i class="fas fa-eye"></i></div>
+                                    <div class="skill-info">
+                                        <h5>Computer Vision</h5>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar"></div>
+                                            <span>Advanced</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="skills-category">
-                            <h4><i class="fas fa-code"></i> Development</h4>
-                            <div class="skills-grid">
-                                <div class="skill-card">
-                                    <i class="fab fa-python"></i>
-                                    <span>Python</span>
-                                    <div class="skill-level expert"></div>
+                        <div class="skills-group">
+                            <div class="skills-header">
+                                <i class="fas fa-code"></i>
+                                <h4>Development</h4>
+                            </div>
+                            <div class="skill-tiles">
+                                <div class="skill-tile" data-level="95">
+                                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                                    <div class="skill-info">
+                                        <h5>Python</h5>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar"></div>
+                                            <span>Expert</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="skill-card">
-                                    <i class="fas fa-flask"></i>
-                                    <span>Flask</span>
-                                    <div class="skill-level advanced"></div>
+                                <div class="skill-tile" data-level="85">
+                                    <div class="skill-icon"><i class="fas fa-flask"></i></div>
+                                    <div class="skill-info">
+                                        <h5>Flask</h5>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar"></div>
+                                            <span>Advanced</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="skill-card">
-                                    <i class="fas fa-terminal"></i>
-                                    <span>Bash</span>
-                                    <div class="skill-level advanced"></div>
-                                </div>
-                                <div class="skill-card">
-                                    <i class="fas fa-cogs"></i>
-                                    <span>OpenCV</span>
-                                    <div class="skill-level expert"></div>
+                                <div class="skill-tile" data-level="90">
+                                    <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                                    <div class="skill-info">
+                                        <h5>Bash</h5>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar"></div>
+                                            <span>Expert</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="skills-category">
-                            <h4><i class="fas fa-project-diagram"></i> Projects Focus</h4>
-                            <div class="projects-highlights">
-                                <div class="project-tag">Image Processing</div>
-                                <div class="project-tag">Neural Networks</div>
-                                <div class="project-tag">Data Analysis</div>
-                                <div class="project-tag">Automation</div>
-                                <div class="project-tag">CLI Tools</div>
+                        <div class="skills-group">
+                            <div class="skills-header">
+                                <i class="fas fa-project-diagram"></i>
+                                <h4>Specializations</h4>
+                            </div>
+                            <div class="specialization-tags">
+                                <div class="spec-tag">Image Processing</div>
+                                <div class="spec-tag">Neural Networks</div>
+                                <div class="spec-tag">Data Analysis</div>
+                                <div class="spec-tag">Automation</div>
+                                <div class="spec-tag">CLI Tools</div>
                             </div>
                         </div>
                     </div>
@@ -119,6 +188,16 @@
             <div class="section-container">
                 <div class="section-header">
                     <p class="section-description">Explore my open-source projects and contributions</p>
+                    <div class="github-proof">
+                        <div class="github-stats">
+                            <i class="fab fa-github"></i>
+                            <p class="quote">"Code is like humor. When you have to explain it, it's bad." - Cory House</p>
+                            <div class="stats">
+                                <span><i class="fas fa-code-branch"></i> Active Contributor</span>
+                                <span><i class="fas fa-star"></i> Open Source Enthusiast</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="repo-filters">
                 <input type="text" id="searchInput" placeholder="Search repositories...">
