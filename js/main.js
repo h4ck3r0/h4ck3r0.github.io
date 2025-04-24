@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // GitHub Repositories
 document.addEventListener('DOMContentLoaded', () => {
     const username = 'h4ck3r0';
-    const repoGrid = document.getElementById('repoGrid');
+    const repoContainer = document.querySelector('.repositories .section-container');
     const languageFilter = document.getElementById('languageFilter');
     const searchInput = document.getElementById('searchInput');
     const sortOption = document.getElementById('sortOption');
@@ -67,14 +67,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch GitHub repositories
     async function fetchRepositories() {
+        repoContainer.innerHTML = '';
         try {
+            // Create container for pinned repos
+            const pinnedSection = document.createElement('div');
+            pinnedSection.className = 'pinned-repos';
+            pinnedSection.innerHTML = `
+                <h3 class="section-title">Featured Projects</h3>
+                <div class="repo-grid"></div>
+            `;
+            repoContainer.insertBefore(pinnedSection, repoContainer.firstChild);
+            
+            // Create container for other repos
+            const repoSection = document.createElement('div');
+            repoSection.className = 'other-repos';
+            repoSection.innerHTML = `
+                <h3 class="section-title">All Repositories</h3>
+                <div class="repo-grid" id="repoGrid"></div>
+            `;
+            repoContainer.appendChild(repoSection);
+            
+            // Fetch pinned repositories
+            const pinnedResponse = await fetch(`https://gh-pinned-repos.egoist.dev/?username=${username}`);
+            const pinnedRepos = await pinnedResponse.json();
+            
+            // Fetch all repositories
             const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
-            allRepos = await response.json();
+            allRepos = await response.json().catch(() => {
+                throw new Error('Failed to fetch repositories');
+            });
             
             // Get unique languages
             const languages = [...new Set(allRepos.filter(repo => repo.language).map(repo => repo.language))];
-            
-            // Populate language filter
             languages.forEach(lang => {
                 const option = document.createElement('option');
                 option.value = lang;
@@ -82,46 +106,59 @@ document.addEventListener('DOMContentLoaded', () => {
                 languageFilter.appendChild(option);
             });
             
-            displayRepositories(allRepos);
+            // Display pinned repos
+            displayRepositories(pinnedRepos, pinnedSection.querySelector('.repo-grid'));
+            
+            // Display other repos
+            const otherRepos = allRepos.filter(repo => 
+                !pinnedRepos.some(pinned => pinned.repo === repo.name)
+            );
+            displayRepositories(otherRepos, repoSection.querySelector('.repo-grid'));
+            
         } catch (error) {
-            repoGrid.innerHTML = '<p class="error">Error loading repositories. Please try again later.</p>';
+            repoContainer.innerHTML = '<p class="error">Error loading repositories. Please try again later.</p>';
         }
     }
 
     // Display repositories
-    function displayRepositories(repos) {
-        repoGrid.innerHTML = '';
+    function displayRepositories(repos, container) {
         
         if (repos.length === 0) {
-            repoGrid.innerHTML = '<p class="no-results">No repositories found matching your criteria.</p>';
+            container.innerHTML = '<p class="no-results">No repositories found matching your criteria.</p>';
             return;
         }
 
         repos.forEach(repo => {
+            const repoName = repo.repo || repo.name;
+            const repoDesc = repo.description || 'No description available';
+            const repoLanguage = repo.language || '';
+            const repoStars = repo.stars || repo.stargazers_count || 0;
+            const repoForks = repo.forks || repo.forks_count || 0;
+            const repoUrl = repo.link || repo.html_url;
+            
             const card = document.createElement('div');
             card.className = 'repo-card';
             card.setAttribute('data-tilt', '');
             
             card.innerHTML = `
-                <h3>${repo.name}</h3>
-                <p>${repo.description || 'No description available'}</p>
-                ${repo.language ? `<p class="repo-language"><i class="fas fa-code"></i> ${repo.language}</p>` : ''}
+                <h3>${repoName}</h3>
+                <p>${repoDesc}</p>
+                ${repoLanguage ? `<p class="repo-language"><i class="fas fa-code"></i> ${repoLanguage}</p>` : ''}
                 <div class="repo-stats">
-                    <span><i class="fab fa-github"></i> ${repo.stargazers_count}</span>
-                    <span><i class="fas fa-code-branch"></i> ${repo.forks_count}</span>
-                    <span><i class="far fa-clock"></i> ${repo.updated_at.split('T')[0]}</span>
+                    <span><i class="fab fa-github"></i> ${repoStars}</span>
+                    <span><i class="fas fa-code-branch"></i> ${repoForks}</span>
                 </div>
             `;
             
             card.addEventListener('click', () => {
-                window.open(repo.html_url, '_blank');
+                window.open(repoUrl, '_blank');
             });
             
-            repoGrid.appendChild(card);
+            container.appendChild(card);
         });
 
         // Initialize tilt effect
-        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        VanillaTilt.init(container.querySelectorAll("[data-tilt]"), {
             max: 10,
             speed: 400,
             glare: true,
@@ -131,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Filter and sort repositories
     function filterAndSortRepos() {
+        const otherReposGrid = document.querySelector('.other-repos .repo-grid');
         let filteredRepos = [...allRepos];
         
         // Apply language filter
@@ -160,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
         }
         
-        displayRepositories(filteredRepos);
+        displayRepositories(filteredRepos, otherReposGrid);
     }
 
     // Event listeners for filters

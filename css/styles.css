@@ -263,6 +263,8 @@ body {
 .social-links {
     display: flex;
     gap: calc(var(--spacing-unit) * 2);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .typewriter {
@@ -483,17 +485,14 @@ h2::after {
 }
 
 .skills-wrapper {
-    display: grid;
-    gap: calc(var(--spacing-unit) * 6);
     max-width: 1000px;
     margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 2);
 }
 
 .skills-group {
-    background: var(--primary-white);
-    border-radius: var(--border-radius);
-    padding: calc(var(--spacing-unit) * 4);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: calc(var(--spacing-unit) * 4);
+    background: transparent;
 }
 
 .skills-header {
@@ -890,11 +889,28 @@ h2::after {
     padding: calc(var(--spacing-unit) * 4);
 }
 
+.pinned-repos {
+    margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
 .repo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: calc(var(--spacing-unit) * 4);
-    margin-top: calc(var(--spacing-unit) * 4);
+    margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.pinned-repos .repo-card {
+    border: 2px solid var(--primary-black);
+    background: linear-gradient(to right bottom, var(--primary-white), var(--gray-light));
 }
 
 .repo-card {
