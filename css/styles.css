@@ -356,7 +356,9 @@ h2::after {
 
 .about-list i {
     font-size: 1.2rem;
-    color: var(--primary-black);
+    background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about-cards {
@@ -881,29 +883,11 @@ h2::after {
     margin-bottom: calc(var(--spacing-unit) * 3);
 }
 
-.repo-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: calc(var(--spacing-unit));
-    margin-bottom: calc(var(--spacing-unit) * 3);
-}
-
 .repo-language {
-    background: var(--primary-black);
-    color: var(--primary-white);
-    padding: calc(var(--spacing-unit)) calc(var(--spacing-unit) * 2);
-    border-radius: 15px;
-    font-size: 0.85rem;
+    color: var(--gray-dark);
+    font-size: 0.9rem;
     font-weight: 500;
-}
-
-.repo-topic {
-    background: var(--gray-light);
-    color: var(--primary-black);
-    padding: calc(var(--spacing-unit)) calc(var(--spacing-unit) * 2);
-    border-radius: 15px;
-    font-size: 0.85rem;
-    font-weight: 500;
+    margin-bottom: calc(var(--spacing-unit) * 3);
 }
 
 .repo-stats {

@@ -105,14 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
             card.innerHTML = `
                 <h3>${repo.name}</h3>
                 <p>${repo.description || 'No description available'}</p>
-                <div class="repo-tags">
-                    ${repo.language ? `<span class="repo-language">${repo.language}</span>` : ''}
-                    ${repo.topics ? repo.topics.map(topic => `<span class="repo-topic">${topic}</span>`).join('') : ''}
-                </div>
+                ${repo.language ? `<p class="repo-language"><i class="fas fa-code"></i> ${repo.language}</p>` : ''}
                 <div class="repo-stats">
-                    <span><i class="fas fa-star"></i> ${repo.stargazers_count}</span>
+                    <span><i class="fab fa-github"></i> ${repo.stargazers_count}</span>
                     <span><i class="fas fa-code-branch"></i> ${repo.forks_count}</span>
-                    <span><i class="fas fa-circle"></i> ${repo.updated_at.split('T')[0]}</span>
+                    <span><i class="far fa-clock"></i> ${repo.updated_at.split('T')[0]}</span>
                 </div>
             `;
             
