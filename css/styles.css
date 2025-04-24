@@ -211,16 +211,17 @@ body {
 }
 
 .social-links a {
-    color: var(--primary-white);
+    color: var(--primary-black);
     margin: 0 calc(var(--spacing-unit));
     transition: all var(--transition-speed) ease;
     display: inline-flex;
     align-items: center;
     gap: calc(var(--spacing-unit) * 1.5);
-    background: var(--primary-black);
+    background: var(--primary-white);
     padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
     border-radius: 30px;
     text-decoration: none;
+    border: 1px solid var(--primary-black);
 }
 
 .social-links a i {
@@ -254,6 +255,8 @@ body {
 
 .social-links a:hover {
     transform: translateY(-3px);
+    background: var(--primary-black);
+    color: var(--primary-white);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
