@@ -212,16 +212,25 @@ body {
 
 .social-links a {
     color: var(--primary-white);
-    font-size: 1rem;
     margin: 0 calc(var(--spacing-unit));
     transition: all var(--transition-speed) ease;
     display: inline-flex;
     align-items: center;
-    gap: calc(var(--spacing-unit));
+    gap: calc(var(--spacing-unit) * 1.5);
     background: var(--primary-black);
-    padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 2);
+    padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
     border-radius: 30px;
     text-decoration: none;
+}
+
+.social-links a i {
+    font-size: 1.3rem;
+}
+
+.social-links a span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .social-links a.vlog-link {
@@ -248,8 +257,9 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.social-links a span {
-    font-weight: 500;
+.social-links {
+    display: flex;
+    gap: calc(var(--spacing-unit) * 2);
 }
 
 .typewriter {
